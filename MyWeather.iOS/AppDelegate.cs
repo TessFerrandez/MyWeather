@@ -1,6 +1,9 @@
 ﻿using Foundation;
 using GalaSoft.MvvmLight.Ioc;
+using GalaSoft.MvvmLight.Threading;
 using GalaSoft.MvvmLight.Views;
+using MyWeather.Core.Providers;
+using MyWeather.iOS.Providers;
 using UIKit;
 
 namespace MyWeather.iOS
@@ -28,6 +31,11 @@ namespace MyWeather.iOS
             nav.Initialize(Window.RootViewController as UINavigationController);
 
             SimpleIoc.Default.Register<INavigationService>(() => nav);
+
+            SimpleIoc.Default.Register<IDispatcherProvider, DispatcherProvider>();
+            SimpleIoc.Default.Register<INetworkStatusProvider, NetworkStatusProvider>();
+
+            DispatcherHelper.Initialize(application);
             return true;
         }
 

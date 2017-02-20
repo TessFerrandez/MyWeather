@@ -13,8 +13,25 @@ namespace MyWeather.iOS
     [Register ("HomeViewController")]
     partial class HomeViewController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton GetWeatherButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField LocationText { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (GetWeatherButton != null) {
+                GetWeatherButton.Dispose ();
+                GetWeatherButton = null;
+            }
+
+            if (LocationText != null) {
+                LocationText.Dispose ();
+                LocationText = null;
+            }
         }
     }
 }
