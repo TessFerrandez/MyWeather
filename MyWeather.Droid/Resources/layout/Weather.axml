@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="12dp">
+    <TextView
+        android:id="@+id/Weather_LocationTextView"
+        android:text="London,GB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp" />
+    <TextView
+        android:id="@+id/Weather_DescriptionTextView"
+        android:text="Partly cloudy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Weather_LocationTextView"
+        android:textSize="30dp"
+        android:layout_marginTop="12dp" />
+    <ImageView
+        android:id="@+id/Weather_IconImageView"
+        android:src="@android:drawable/ic_menu_gallery"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/Weather_DescriptionTextView" />
+    <TextView
+        android:id="@+id/Weather_TempTextView"
+        android:text="120C"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignTop="@id/Weather_IconImageView"
+        android:layout_toRightOf="@id/Weather_IconImageView"
+        android:textSize="48dp"
+        android:layout_marginTop="12dp" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/Weather_ForecastList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Weather_IconImageView" />
+</RelativeLayout>

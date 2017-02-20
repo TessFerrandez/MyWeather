@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6195382C-1AA2-47A9-B936-E0D64B7A89C8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyWeather.Core</RootNamespace>
+    <AssemblyName>MyWeather.Core</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile44</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="project.json" />
+    <!-- A reference to the entire .NET Framework is automatically included -->
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Design\DesignDataAccessService.cs" />
+    <Compile Include="Design\DesignNavigationService.cs" />
+    <Compile Include="Helpers\AppContentViewModelBase.cs" />
+    <Compile Include="Helpers\AppViewModelBaseWithoutParameter.cs" />
+    <Compile Include="Helpers\AppViewModelBaseWithParameter.cs" />
+    <Compile Include="Helpers\Group.cs" />
+    <Compile Include="Helpers\AppViewModelBase.cs" />
+    <Compile Include="Models\City.cs" />
+    <Compile Include="Models\CurrentWeatherDataModel.cs" />
+    <Compile Include="Models\ForecastItemModel.cs" />
+    <Compile Include="Models\ForecastModel.cs" />
+    <Compile Include="Models\Main.cs" />
+    <Compile Include="Models\Sys.cs" />
+    <Compile Include="Models\Temp.cs" />
+    <Compile Include="Models\Weather.cs" />
+    <Compile Include="Models\Wind.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\IDispatcherProvider.cs" />
+    <Compile Include="Providers\INavigationProvider.cs" />
+    <Compile Include="Providers\INetworkStatusProvider.cs" />
+    <Compile Include="Services\Constants.cs" />
+    <Compile Include="Services\DataAccessService.cs" />
+    <Compile Include="ViewModels\CurrentWeatherViewModel.cs" />
+    <Compile Include="Design\DesignWeatherViewModel.cs" />
+    <Compile Include="ViewModels\ForecastViewModel.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelLocator.cs" />
+    <Compile Include="ViewModels\WeatherViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/FlowerTemplateRoot"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp"
+    android:paddingRight="17dp"
+    android:paddingLeft="17dp">
+    <ImageView
+        android:id="@+id/FCT_IconImageView"
+        android:src="@android:drawable/ic_menu_gallery"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginRight="10dp" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/FCT_IconImageView">
+        <TextView
+            android:id="@+id/FCT_DayOfWeekTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:textColor="#fffa28d4" />
+        <TextView
+            android:id="@+id/FCT_DescriptionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:ellipsize="end"
+            android:singleLine="true" />
+        <TextView
+            android:id="@+id/FCT_DayTempTextView"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:ellipsize="end"
+            android:singleLine="true" />
+    </LinearLayout>
+</RelativeLayout>
