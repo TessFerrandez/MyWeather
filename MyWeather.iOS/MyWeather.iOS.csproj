@@ -133,6 +133,7 @@
     </Compile>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="MvvmViewControllerBase.cs" />
     <Compile Include="Providers\DispatcherProvider.cs" />
     <Compile Include="Providers\NetworkStatusProvider.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
