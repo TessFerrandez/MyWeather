@@ -1,9 +1,10 @@
 using Android.Widget;
+using GalaSoft.MvvmLight.Views;
 using MyWeather.Droid.Helpers;
 
 namespace MyWeather.Droid
 {
-    public partial class MainActivity : ActivityBaseEx
+    public partial class MainActivity : MvvmActivityBase
     {
         private EditText _locationEditText;
         private Button _getWeatherButton;

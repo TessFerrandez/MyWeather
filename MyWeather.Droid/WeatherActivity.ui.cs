@@ -4,7 +4,7 @@ using MyWeather.Droid.Helpers;
 
 namespace MyWeather.Droid
 {
-    public partial class WeatherActivity : ActivityBaseEx
+    public partial class WeatherActivity : MvvmActivityBase
     {
         private TextView _locationTextView;
         public TextView LocationTextView

@@ -90,6 +90,7 @@
       <SubType>Code</SubType>
       <DependentUpon>MainActivity.cs</DependentUpon>
     </Compile>
+    <Compile Include="MvvmActivityBase.cs" />
     <Compile Include="Providers\DispatcherProvider.cs" />
     <Compile Include="Providers\NetworkStatusProvider.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
