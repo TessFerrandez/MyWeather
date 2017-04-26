@@ -38,6 +38,7 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Services\Constants.cs" />
     <Compile Include="Design\DesignDataAccessService.cs" />
     <Compile Include="Design\DesignNavigationService.cs" />
     <Compile Include="Helpers\AppContentViewModelBase.cs" />
@@ -58,7 +59,6 @@
     <Compile Include="Providers\IDispatcherProvider.cs" />
     <Compile Include="Providers\INavigationProvider.cs" />
     <Compile Include="Providers\INetworkStatusProvider.cs" />
-    <Compile Include="Services\Constants.cs" />
     <Compile Include="Services\DataAccessService.cs" />
     <Compile Include="ViewModels\CurrentWeatherViewModel.cs" />
     <Compile Include="Design\DesignWeatherViewModel.cs" />
