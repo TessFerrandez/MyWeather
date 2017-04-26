@@ -8,6 +8,6 @@ namespace MyWeather.Core
 {
     public class Constants
     {
-        public static string APPID = "your-app-id";
+        public static string APPID = "your-app-id2";
     }
 }
