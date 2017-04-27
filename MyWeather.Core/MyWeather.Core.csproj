@@ -38,9 +38,14 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Design\ViewModels\DesignTimeHomeViewModel.cs" />
+    <Compile Include="Helpers\Design\DTAppViewModelBaseWithParameter.cs" />
+    <Compile Include="Helpers\Design\DTAppContentViewModelBase.cs" />
+    <Compile Include="Helpers\Design\DTAppViewModelBase.cs" />
+    <Compile Include="Helpers\Design\DTAppViewModelBaseWithoutParameter.cs" />
     <Compile Include="Services\Constants.cs" />
-    <Compile Include="Design\DesignDataAccessService.cs" />
-    <Compile Include="Design\DesignNavigationService.cs" />
+    <Compile Include="Design\Services\DesignDataAccessService.cs" />
+    <Compile Include="Design\Services\DesignNavigationService.cs" />
     <Compile Include="Helpers\AppContentViewModelBase.cs" />
     <Compile Include="Helpers\AppViewModelBaseWithoutParameter.cs" />
     <Compile Include="Helpers\AppViewModelBaseWithParameter.cs" />
@@ -61,7 +66,7 @@
     <Compile Include="Providers\INetworkStatusProvider.cs" />
     <Compile Include="Services\DataAccessService.cs" />
     <Compile Include="ViewModels\CurrentWeatherViewModel.cs" />
-    <Compile Include="Design\DesignWeatherViewModel.cs" />
+    <Compile Include="Design\ViewModels\DesignWeatherViewModel.cs" />
     <Compile Include="ViewModels\ForecastViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
     <Compile Include="ViewModels\ViewModelLocator.cs" />

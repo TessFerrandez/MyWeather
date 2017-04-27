@@ -4,6 +4,7 @@ using GalaSoft.MvvmLight.Views;
 using Microsoft.Practices.ServiceLocation;
 using MyWeather.Core.Services;
 using MyWeather.Core.Design;
+using MyWeather.Core.Design.ViewModels;
 
 namespace MyWeather.Core.ViewModels
 {
@@ -32,13 +33,14 @@ namespace MyWeather.Core.ViewModels
                 }
                 SimpleIoc.Default.Register<IDataAccessService, DesignDataAccessService>();
                 SimpleIoc.Default.Register<IWeatherViewModel, DesignWeatherViewModel>();
+                SimpleIoc.Default.Register<IHomeViewModel, DesignTimeHomeViewModel>();
             }
             else
             {
                 SimpleIoc.Default.Register<IDataAccessService, DataAccessService>();
                 SimpleIoc.Default.Register<IWeatherViewModel, WeatherViewModel>();
+                SimpleIoc.Default.Register<IHomeViewModel, HomeViewModel>();
             }
-            SimpleIoc.Default.Register<IHomeViewModel, HomeViewModel>();
         }
 
         private static bool UseDesignData

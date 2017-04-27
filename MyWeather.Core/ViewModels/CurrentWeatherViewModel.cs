@@ -1,20 +1,10 @@
-﻿using MyWeather.Core.Helpers;
+﻿using GalaSoft.MvvmLight;
+using MyWeather.Core.Helpers;
 using MyWeather.Core.Models;
 
 namespace MyWeather.Core.ViewModels
 {
-    public interface ICurrentWeatherViewModel : IViewModelBase
-    {
-        string Icon { get; }
-        string Temp { get; }
-        string Description { get; }
-        string TempRange { get; }
-        string Preassure { get; }
-        string Humidity { get; }
-        string WindSpeed { get; }
-
-    }
-    public class CurrentWeatherViewModel : AppViewModelBase, ICurrentWeatherViewModel
+    public class CurrentWeatherViewModel : ViewModelBase
     {
         private string _description;
         public string Description

@@ -5,23 +5,18 @@ using System.Collections.ObjectModel;
 
 namespace MyWeather.Core.Design
 {
-    public class DesignWeatherViewModel : AppViewModelBaseWithParameter<string>, IWeatherViewModel
+    public class DesignWeatherViewModel : DTAppViewModelBaseWithParameter<string>, IWeatherViewModel
     {
-        public CurrentWeatherViewModel CurrentWeather
+        public CurrentWeatherViewModel CurrentWeather => new CurrentWeatherViewModel()
         {
-            get
-            {
-                return new CurrentWeatherViewModel() {
-                    Icon = "http://openweathermap.org/img/w/04n.png",
-                    Temp = "15.2°C",
-                    Description = "Partly cloudy",
-                    TempRange = "8°C-12.1°C",
-                    Preassure = "121hPa",
-                    Humidity = "10%",
-                    WindSpeed = "1.2kmph NE"
-                };
-            }
-        }
+            Icon = "http://openweathermap.org/img/w/04n.png",
+            Temp = "15.2°C",
+            Description = "Partly cloudy",
+            TempRange = "8°C-12.1°C",
+            Preassure = "121hPa",
+            Humidity = "10%",
+            WindSpeed = "1.2kmph NE"
+        };
         public ObservableCollection<ForecastViewModel> Forecasts
         {
             get

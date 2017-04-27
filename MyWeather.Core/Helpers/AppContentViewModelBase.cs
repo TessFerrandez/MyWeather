@@ -34,7 +34,7 @@ namespace MyWeather.Core.Helpers
         private int _busyCounter = 0;
         private bool _isOnline;
         private bool _isActive;
-        private INetworkStatusProvider _networkStatusProvider; 
+        private INetworkStatusProvider _networkStatusProvider;
 
         public bool IsBusy
         {
@@ -78,7 +78,8 @@ namespace MyWeather.Core.Helpers
         }
         ~AppContentViewModelBase()
         {
-            _networkStatusProvider.NetworkStatusChanged -= OnNetworkStatusChanged;
+            if (!IsInDesignModeStatic)
+                _networkStatusProvider.NetworkStatusChanged -= OnNetworkStatusChanged;
         }
 
         public void AddBusy()
